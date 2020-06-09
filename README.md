@@ -11,10 +11,6 @@ npm install
 npm start
 ```
 
-## Test
-
-npm run test -- --coverage
-
 ## Technologies
  - React
  - React Hooks
