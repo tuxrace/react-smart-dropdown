@@ -14,7 +14,7 @@ const List = ({countries, hasMore, handleClick, handleLoadMore, pageSize}) => {
             const debounced = debounce(() => {
                 const newCountryData = countryData.filter(item => item.includes(search));
                 setCountryData(newCountryData);
-            }, 300);
+            }, 100);
             debounced();
         } else {
             setCountryData(countries);
@@ -27,12 +27,12 @@ const List = ({countries, hasMore, handleClick, handleLoadMore, pageSize}) => {
 
     return (
         <div>
-            <input type="text" placeholder={`🔍`} onChange={handleChange} value={search}  />
+            <input type="text" placeholder={`🔍search`} onChange={handleChange} value={search}  />
             <div>{countryData && countryData.length > 0 && countryData.slice(0, pageSize).map((country, idx) => {
                     return <div className="cursor" key={idx} onClick={() => handleClick(country)}> {country} </div>
                 })}
             </div>
-            <span className="cursor red hasMore" onClick={handleLoadMore}> {hasMore && `${countries.length - pageSize} more...`} </span>
+            <div className="cursor red hasMore" onClick={handleLoadMore}> {hasMore && `${countries.length - pageSize} more...`} </div>
         </div>
     )
 }
