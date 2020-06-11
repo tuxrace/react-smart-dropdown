@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { PAGE_SIZE } from '../constants';
+import { PAGE_SIZE } from '../config';
 import List from './List';
 
 const Search = () => {
