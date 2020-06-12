@@ -34,14 +34,12 @@ const Search = () => {
     return (
         <div className="search">
         <h1>{selected}</h1>
-
         <div className="container cursor box" onClick={() => setOpen(!open)}> 
-            <div className="item">Select a location </div> <div> ▼ </div> 
+            <div className="item">Select a location</div> <div> ▼ </div> 
         </div>
         <div style={{visibility: open ? 'visible' : 'hidden'}} className="box">
             <List countries={countries} hasMore={hasMore} handleClick={handleClick} handleLoadMore={handleLoadMore} pageSize={pageSize} />
         </div>
-        
     </div>
     )
 }
