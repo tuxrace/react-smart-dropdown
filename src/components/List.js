@@ -34,6 +34,7 @@ const List = ({countries, hasMore, setHasMore, handleClick, handleLoadMore, page
                     return <div className="cursor" key={idx} onClick={() => handleClick(country)}> {country} </div>
                 })}
             </div>
+            {countryData.length === 0 && <div><strong>{search}</strong> not found</div>}
             <div className="cursor red hasMore" onClick={handleLoadMore}> {hasMore && `${countries.length - pageSize} more...`} </div>
         </div>
     )
