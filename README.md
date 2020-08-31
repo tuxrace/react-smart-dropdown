@@ -1,7 +1,7 @@
 # React smart dropdown
     A dropdown box built with React and React hooks.
 
-!['dropdown']('./smart-dropdown.gif')
+<img src="smart-dropdown.gif" width="300">
 
 ## Working Demo
 https://tuxrace.github.io/react-smart-dropdown/
