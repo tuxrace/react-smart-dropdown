@@ -38,7 +38,7 @@ const Search = () => {
             <div className="item">Select a location</div> <div> ▼ </div> 
         </div>
         <div style={{visibility: open ? 'visible' : 'hidden'}} className="box">
-            <List countries={countries} hasMore={hasMore} handleClick={handleClick} handleLoadMore={handleLoadMore} pageSize={pageSize} />
+            <List countries={countries} hasMore={hasMore} setHasMore={setHasMore} handleClick={handleClick} handleLoadMore={handleLoadMore} pageSize={pageSize} />
         </div>
     </div>
     )

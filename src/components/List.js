@@ -2,22 +2,24 @@ import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types';
 import debounce from 'lodash/debounce';
 
-const List = ({countries, hasMore, handleClick, handleLoadMore, pageSize}) => {
+const List = ({countries, hasMore, setHasMore, handleClick, handleLoadMore, pageSize}) => {
     const [countryData, setCountryData] = useState([]);
     const [search, setSearch] = useState('');
 
     const handleChange = (e) => {
-        const search = e.target.value;
+        const searchString = e.target.value.toLowerCase();
         setSearch(e.target.value)
 
-        if (search !== ''){
+        if (searchString !== '') {
             const debounced = debounce(() => {
-                const newCountryData = countryData.filter(item => item.includes(search));
+                const newCountryData = countries.filter(item => item.toLowerCase().includes(searchString));
                 setCountryData(newCountryData);
+                setHasMore(false)
             }, 100);
             debounced();
         } else {
             setCountryData(countries);
+            setHasMore(true)
         }
     }
 
