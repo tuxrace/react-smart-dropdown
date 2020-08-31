@@ -1,5 +1,5 @@
 # React smart dropdown
-    A dropdown box built with React
+    A dropdown box built with React and React hooks.
 
 ## Working Demo
 https://tuxrace.github.io/react-smart-dropdown/
