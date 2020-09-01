@@ -1,5 +1,5 @@
 # React smart dropdown
-    A dropdown box built with React and React hooks.
+    A dropdown box built with React and React hooks
 
 <img src="smart-dropdown.gif" width="300">
 
